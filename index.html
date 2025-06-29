@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudLearn - Master Cloud Computing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    
+    <!-- Logo on the left -->
+    <div class="nav-logo">
+      <i class="fas fa-cloud"></i>
+      <span>CloudLearn</span>
+    </div>
+
+    <!-- Toggler for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav links on the right -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="#topics" class="nav-link active">Topics</a></li>
+        <li class="nav-item"><a href="#quiz" class="nav-link active">Quiz</a></li>
+        <li class="nav-item"><a href="#resources" class="nav-link active">Resources</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Master Cloud Computing</h1>
+            <p class="hero-subtitle">Learn the fundamentals of cloud technology with interactive lessons and practical examples</p>
+            <button class="cta-button" onclick="scrollToSection('topics')">Start Learning</button>
+        </div>
+        <div class="hero-animation">
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+            <div class="cloud cloud3"></div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2 class="section-title">Cloud Computing Topics</h2>
+            <div class="topics-grid">
+                <div class="topic-card" onclick="openModal('basics')">
+                    <div class="topic-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Basics</h3>
+                    <p>Understanding cloud computing fundamentals and service models</p>
+                </div>
+                
+                <div class="topic-card" onclick="openModal('services')">
+                    <div class="topic-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Service Models</h3>
+                    <p>IaaS, PaaS, SaaS - Learn different cloud service models</p>
+                </div>
+                
+                <div class="topic-card" onclick="openModal('deployment')">
+                    <div class="topic-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Deployment Models</h3>
+                    <p>Public, Private, Hybrid, and Community clouds</p>
+                </div>
+                
+                <div class="topic-card" onclick="openModal('security')">
+                    <div class="topic-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cloud Security</h3>
+                    <p>Security challenges and best practices in cloud computing</p>
+                </div>
+                
+                <div class="topic-card" onclick="openModal('providers')">
+                    <div class="topic-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Cloud Providers</h3>
+                    <p>AWS, Azure, Google Cloud - Major cloud platforms</p>
+                </div>
+                
+                <div class="topic-card" onclick="openModal('future')">
+                    <div class="topic-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Future Trends</h3>
+                    <p>Edge computing, serverless, and emerging technologies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Test Your Knowledge</h2>
+            <div class="quiz-container">
+                <div id="quiz-content">
+                    <div class="question-card">
+                        <h3 id="question-text">What does IaaS stand for?</h3>
+                        <div class="options">
+                            <button class="option-btn" onclick="selectAnswer(0)">Infrastructure as a Service</button>
+                            <button class="option-btn" onclick="selectAnswer(1)">Internet as a Service</button>
+                            <button class="option-btn" onclick="selectAnswer(2)">Information as a Service</button>
+                            <button class="option-btn" onclick="selectAnswer(3)">Integration as a Service</button>
+                        </div>
+                        <div class="quiz-controls">
+                            <button id="next-btn" onclick="nextQuestion()" disabled>Next Question</button>
+                            <div class="score">Score: <span id="score">0</span>/<span id="total">5</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Learning Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Documentation</h3>
+                    <p>Official cloud provider documentation and guides</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Tutorials</h3>
+                    <p>Step-by-step video lessons and demonstrations</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Hands-on Labs</h3>
+                    <p>Practical exercises and coding challenges</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certifications</h3>
+                    <p>Industry-recognized cloud computing certifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Topic Details -->
+    <div id="topic-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 CloudLearn. Made for Computer Science Students.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
