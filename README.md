@@ -10,7 +10,7 @@ A responsive, interactive platform to learn cloud computing basics with quizzes 
 
 ## 📦 Quick Start
 ```bash
-git clone [repo-url]
-cd cloud-computing-platform
+git clone https://github.com/KARISHMA674/cloudComputingLearningPlatform.git
+cd cloudComputingLearningPlatform
 # Open index.html OR run
-python -m http.server 8000
+```
