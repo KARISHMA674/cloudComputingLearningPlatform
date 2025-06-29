@@ -25,7 +25,7 @@ Once you open the project in your browser:
 - 📱 **Fully Responsive**: Experience works seamlessly on mobile, tablet, and desktop devices.
 
 > This platform is designed to help students, educators, and self-learners gain a solid understanding of cloud computing in an interactive, accessible way.
-> ## 🌐 Live Demo
 
+## 🌐 Live Demo
 🔗 [Explore the Live Website](https://karishma674.github.io/cloudComputingLearningPlatform/)
 
